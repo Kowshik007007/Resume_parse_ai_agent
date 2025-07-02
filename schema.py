@@ -10,7 +10,11 @@ class ResumeSchema(BaseModel):
     name: str
     email: EmailStr
     phone: str
+    city: Optional[str]
+    country: Optional[str]
     skills: List[str]
+    soft_skills: List[str] = Field(default_factory=list)
+    certifications: List[str] = Field(default_factory=list)
     college_name: Optional[str]
     degree: Optional[str]
     total_experience: Optional[str]
